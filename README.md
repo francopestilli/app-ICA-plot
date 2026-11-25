@@ -2,6 +2,38 @@ ica.plot_components()
 
 # plot components of the ICA
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+> **Plots the topographies of the components of an MNE-Python ICA solution (ica.plot_components) as a PNG image.**
+
+Visualisation utility that reads an MNE ICA object (.fif) and saves the scalp topography plot of its components, also shown in the brainlife product. Use it to inspect ICA components before choosing which to reject. Despite the README, it does not detect ECG components.
+
+| | |
+|---|---|
+| 📥 **Inputs** | `neuro/meeg/mne/ica` |
+| 📤 **Outputs** | `generic/image/png` |
+| 🐳 **Container** | `brainlife/mne:1.0.2` |
+| ⚙️ **Resources** | 8 CPUs |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.676](https://doi.org/10.25663/brainlife.app.676) |
+
+#### 📥 Inputs
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `ica` | `neuro/meeg/mne/ica` | yes | Fitted ICA solution in MNE format (-ica.fif). |
+
+#### 📤 Outputs
+
+| Output | Datatype | Description |
+|---|---|---|
+| `out_figs` | `generic/image/png` | ica.png with the component topographies. |
+
+📚 **References used by this App:**
+- Gramfort A. et al. MEG and EEG data analysis with MNE-Python. Frontiers in Neuroscience 7:267 (2013). [doi:10.3389/fnins.2013.00267](https://doi.org/10.3389/fnins.2013.00267)
+- Avesani P. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.530-blue.svg)](https://doi.org/10.25663/brainlife.app.530)
 
